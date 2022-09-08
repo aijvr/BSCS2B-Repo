@@ -1,0 +1,40 @@
+Create table tbl_Employees (
+EmployeeID int Primary key auto_increment,
+EmployeeName VARCHAR(50)  null,
+JobName VARCHAR(50) null,
+ManagerID int  null,
+HireDate Datetime  null,
+Salary Decimal(18,2)  null,
+Commision Decimal(18,2)  null,
+DepartmentID int  null
+);
+
+INSERT INTO tbl_Employees (
+EmployeeName,
+JobName,
+ManagerID,
+HireDate,
+Salary,
+Commision,
+DepartmentID
+) VALUES
+('BLAZE', 'MANAGER', '68319', '1991-05-01 00:00:00.000', '2750.00',  NULL, '3001'),
+('CLARE', 'MANAGER', '68319', '1991-06-09 00:00:00.000', '2550.00',  NULL, '1001'),
+('JONAS', 'MANAGER', '68319', '1991-04-02 00:00:00.000', '2957.00',  NULL, '2001'),
+('SCARLET', 'ANALYST', '65646', '1991-12-08 00:00:00.000', '3100.00',  NULL, '2001'),
+('FRANK', 'ANALYST', '65646', '1991-05-01 00:00:00.000', '2750.00',  NULL, '2001'),
+('SANDRINE', 'CLERK', '69062', '1991-12-18 00:00:00.000', '900.00',  NULL, '2001'),
+('ADELYN', 'SALESMAN', '66928', '1991-02-20 00:00:00.000', '1700.00',  '400.00', '3001'),
+('WADE', 'SALESMAN', '68319', '1991-02-22 00:00:00.000', '1350.00',  '1500.00', '3001'),
+('MADDEN', 'SALESMAN', '68319', '1991-09-28 00:00:00.000', '1350.00',  '600.00', '3001'),
+('KAYLING', 'PRESIDENT', NULL, '1991-11-18 00:00:00.000', '6000.00',  NULL, '1001');
+
+SELECT DISTINCT JobName FROM tbl_Employees;
+
+
+SELECT EmployeeID, EmployeeName, Salary, HireDate FROM tbl_Employees ORDER BY Salary DESC;
+
+
+UPDATE tbl_Employees SET ManagerID = "66930" WHERE EmployeeID = 10;
+
+ SELECT * FROM tbl_Employees;
